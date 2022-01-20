@@ -53,4 +53,15 @@ public class Grid {
         return numberOfAliveNeighbor;
     }
 
+    public void update() {
+        CellState[][] cellStates = getState();
+        for (int row = 0; row < cells.length; row++) {
+            for (int col = 0; col < cells[row].length; col++) {
+                int numberOfAliveNeighbors = getNumberOfAliveNeighbors(cellStates, row, col);
+                cells[row][col].update(numberOfAliveNeighbors);
+            }
+        }
+    }
+
+
 }
