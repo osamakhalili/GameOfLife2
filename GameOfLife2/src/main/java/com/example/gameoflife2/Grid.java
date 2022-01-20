@@ -26,4 +26,14 @@ public class Grid {
         return cellStates;
     }
 
+
+    public int checkCellIsAlive(CellState[][] state, int row, int col) {
+        if (col >= 0 && col < state[row].length) {
+            if (state[row][col] == CellState.ALIVE) {
+                return 1;
+            }
+        }
+        return 0;
+    }
+
 }
