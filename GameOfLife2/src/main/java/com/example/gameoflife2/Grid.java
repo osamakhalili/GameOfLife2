@@ -1,4 +1,6 @@
 package com.example.gameoflife2;
+import com.example.gameoflife2.GridCell.CellState;
+
 
 public class Grid {
 
@@ -12,6 +14,16 @@ public class Grid {
                 cells[row][col] = new GridCell(cellStates[row][col]);
             }
         }
+    }
+    public CellState[][] getState() {
+        CellState[][] cellStates = new CellState[cells.length][];
+        for (int row = 0; row < cells.length; row++) {
+            cellStates[row] = new CellState[cells[row].length];
+            for (int col = 0; col < cells[row].length; col++) {
+                cellStates[row][col] = cells[row][col].getState();
+            }
+        }
+        return cellStates;
     }
 
 }
