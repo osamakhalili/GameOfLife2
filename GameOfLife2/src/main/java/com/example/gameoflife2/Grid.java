@@ -44,5 +44,13 @@ public class Grid {
         }
         return numberOfAliveNeighbor;
     }
+    public int getNumberOfAliveNeighbors(CellState[][] state, int row, int col) {
+        int numberOfAliveNeighbor = 0;
+        numberOfAliveNeighbor += getNumberOfAliveNeighborsInRow(state, row - 1, col);
+        numberOfAliveNeighbor += checkCellIsAlive(state, row, col - 1);
+        numberOfAliveNeighbor += checkCellIsAlive(state, row, col + 1);
+        numberOfAliveNeighbor += getNumberOfAliveNeighborsInRow(state, row + 1, col);
+        return numberOfAliveNeighbor;
+    }
 
 }
