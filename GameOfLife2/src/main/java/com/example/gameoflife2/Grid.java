@@ -1,5 +1,11 @@
 package com.example.gameoflife2;
 import com.example.gameoflife2.GridCell.CellState;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 
 
 public class Grid {
@@ -63,5 +69,7 @@ public class Grid {
         }
     }
 
-
+    public GridCell[][] getCells(){
+        return cells;
+    }
 }
