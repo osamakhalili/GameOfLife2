@@ -14,6 +14,7 @@
     </padding>
 
         <Button text="Generate" onAction="#onGenerateClick"/>
+        <Button text="Rest" onAction="#onRestClick"/>
         <GridPane fx:id="gridPane"></GridPane>
 
 

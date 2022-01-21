@@ -45,4 +45,16 @@ public class AppController {
         grid.update();
         setGridPane(grid.getCells());
     }
+
+    public void onRestClick() {
+        GridCell.CellState[][] original = new GridCell.CellState[][]{
+                {X, O, X, X, O, X, X, O},
+                {O, O, O, X, X, O, X, O},
+                {O, X, X, O, X, O, X, X},
+                {X, O, X, O, O, O, O, X},
+        };
+        grid= new Grid(original);
+        setGridPane(grid.getCells());
+
+    }
 }
